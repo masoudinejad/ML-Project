@@ -1,0 +1,29 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: check-json
+    -   id: check-toml
+    -   id: name-tests-test
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.12.0
+  hooks:
+    # Sort and fix imports.
+    - id: ruff
+      name: ruff (imports)
+      types_or: [ python, pyi ]
+      args: [ --select=I, --fix ]
+    # Run the formatter.
+    - id: ruff-format
+      types_or: [ python, pyi ]
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.12.1
+  hooks:
+    - id: nbqa-ruff
+      args: [--fix]
+    - id: nbqa-black
+    - id: nbqa-clean

@@ -9,15 +9,12 @@ repos:
     -   id: check-toml
     -   id: name-tests-test
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  # Ruff version.
-  rev: v0.12.0
+  rev: v0.4.4
   hooks:
-    # Sort and fix imports.
     - id: ruff
       name: ruff (imports)
       types_or: [ python, pyi ]
       args: [ --select=I, --fix ]
-    # Run the formatter.
     - id: ruff-format
       types_or: [ python, pyi ]
 - repo: https://github.com/nbQA-dev/nbQA

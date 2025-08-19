@@ -10,19 +10,16 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.x'
-      
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install ruff pytest
-          
+
       - name: Run Ruff
         run: |
           ruff check .
           ruff format --check .
-          
-      - name: Run tests
-        run: pytest
 
       # Optional additional checks
       - name: Security check

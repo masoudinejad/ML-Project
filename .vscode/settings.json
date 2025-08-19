@@ -5,11 +5,11 @@
             "source.fixAll": true,
             "source.organizeImports": true
         },
-        "editor.defaultFormatter": "charliermarsh.ruff"
+        "editor.defaultFormatter": "astral-sh.ruff"
     },
     "[jupyter]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "charliermarsh.ruff"
+        "editor.defaultFormatter": "astral-sh.ruff"
     },
     // Ruff settings
     "ruff.organizeImports": true,
@@ -20,7 +20,6 @@
     "jupyter.notebookFileRoot": "${workspaceFolder}",
     "jupyter.generateSVGPlots": true,
     "jupyter.askForKernelRestart": false,
-    "jupyter.enableCellCodeLens": true,
     "jupyter.enablePlotViewer": true,
     "jupyter.themeMatplotlibPlots": true,
     "jupyter.pylanceLanguageServer": true,
@@ -68,5 +67,6 @@
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
     "jupyter.exportWith": "nbconvert",
-    "jupyter.notebookScrolling": true
+    "jupyter.notebookScrolling": true,
+    "jupyter.interactiveWindow.codeLens.enable": true
 }
